@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+.main{
+    position: relative; 
+    z-index: 10;
+    width: 100%;
+}
+
+.page1{
+    background-color: #EFEAE3;
+    min-height: 100vh;
+}
+
+.nav{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: brown; */
+}
+
+.part2{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.nav h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.432);
+    height: 40px;
+    width: 90px;
+    z-index: 9;
+    font-size: 13px;
+    position: relative;
+    /* background-color: aqua; */
+}
+
+.nav h4 a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.745);
+}
+
+.nav h4::after{
+    content: "";
+    position: absolute;
+    transition: all ease 0.3s;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    left: 0;
+    border-radius: 50%;
+    bottom: -100%;
+}
+
+.nav h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+.nav h4:hover a{
+    color: rgb(255, 255, 255);
+    z-index: 100;
+}
+
+
+.center{
+    height: 68vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 30px;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.left{
+    width: 30%;
+    font-size: 23px;
+    border-bottom: 1px solid black;
+    padding: 4vw 0;
+}
+
+.right{
+    padding: 4vw 0;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid black;
+}
+
+.right h1{
+    text-align: right;
+    font-size: 10vw;
+    line-height: 8vw;
+}
+
+.main video{
+    margin: 30px;
+    width: 96%;
+    position: relative;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.hero1{
+    position: absolute;
+    top: 73vh;
+    right: 0;
+    height: 36vw;
+    border-radius: 50%;
+    /* border-top-left-radius: 50%; */
+    /* border-bottom-left-radius: 50%; */
+    filter: blur(20px);
+    width: 46vw;
+    background-color: blue;
+    animation-name: anime1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite
+}
+
+.hero2{
+    filter: blur(20px);
+    height: 30vw;
+    width: 35vw;
+    position: absolute;
+    top: 73vh;
+    border-radius: 50%;
+    right: 0;
+    background-color: blue;
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite
+}
+
+@keyframes anime {
+    from{
+        transform: translate(-10%,-10%);
+    }
+    to{
+        transform: translate(10%,10%);
+        
+    }
+    
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(3%,-3%);
+    }
+    to{
+        transform: translate(-3%,3%);
+    }
+    
+}
+
+.page2{
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    padding-top: 5vw;
+}
+
+.moving{
+    /* margin: 5vw 0; */
+    overflow-x: auto;
+    white-space: nowrap;
+    /* background-color: blanchedalmond; */
+}
+
+.moving::-webkit-scrollbar{
+    display: none;
+}
+
+.con h1{
+    font-size: 9vw;
+    display: inline-block;
+    /* background-color: aqua; */
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* background-color: red; */
+}
+
+.circle{
+    height: 65px;
+    width: 65px;
+    margin: 1vw 2vw;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: blue;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.content{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con-right img{
+    height: 200px;
+    width: 300px;
+    margin-bottom: 50px;
+    /* margin-top: 50px; */
+    border-radius: 20px;
+}
+.con-right p{
+    width: 70%;
+}
+.con-right{
+    width: 30%;
+    padding-top: 120px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.con-left{
+    position: relative;
+    width: 70%;
+    z-index: 1;
+    padding: 100px 90px;
+}
+
+.con-left h1{
+    line-height: 4vw;
+    font-size: 4vw;
+}
+
+.gooey{
+    height: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(20px);
+    left: 27%;
+    top: 48%;
+    width: 32vw;
+    background-color: blue;
+    animation-name: gooey;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gooey {
+    from{
+        transform: translate(-6%,7%) skew(0);
+    }
+    to{
+        transform: translate(6%,-7%)skew(-10deg);
+    }
+}
+
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding-top: 100px;
+}
+
+.elem{
+    position: relative;
+    height: 120px;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+    padding-left: 2vw;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: rgb(70, 70, 252);
+    transition: all ease-in-out 0.2s;
+}
+
+.elem:hover .overlay{
+    top: 0;
+    border-radius: 0;
+}
+
+.page4{
+    min-height: 150vh;
+    display: flex;
+    background-color: #EFEAE3;
+    justify-content: center;
+}
+
+.fixed{
+    height: 30vw;
+    width: 24vw;
+    z-index: 11;
+    border-radius: 20px;
+    top: 27%;
+    left: 50%;
+    /* background-color: red; */
+    position: fixed;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.projects{
+    display: flex;
+    height: 110vh;
+    width: 95%;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 200px;
+}
+
+.pro-left{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    /* background-color: red; */
+}
+
+.pro-right{
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    width: 65%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    /* background-color: rebeccapurple; */
+}
+
+.pro-menu{
+    border-left: 2px solid #504A45;
+    height: 40vh;
+    width: 60vh;
+    /* background-color: blue; */
+}
+
+.pro-menu h1{
+    margin-top: 10px;
+    font-size: 11vh;
+    margin-left: 30px;
+    text-transform: capitalize;
+    line-height: 1;
+    color: #504A45;
+}
+
+.pro-menu h1:hover{
+    color: white;
+    margin-left: 0;
+}
+
+.page5{
+    height: 100vh;
+    width: 100%;
+    /* background-color: transparent; */
+}
+
+.footer{
+    position: fixed; 
+    bottom: 0;
+    z-index: 9;
+    display: flex;
+    align-items: flex-end;
+    justify-items: center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.footer h1{
+    font-size: 22vw;
+}
+
+.loader{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s
+}
+
+.loader h1{
+    background: linear-gradient(orange,orangered);
+    -webkit-background-clip: text;
+    font-size: 4vw;
+    color: transparent;
+    position: absolute;
+    opacity: 0;
+}
+
+.loader h1:nth-child(1){
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+.loader h1:nth-child(2){
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+
+.loader h1:nth-child(3){
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    
+    10%{
+        opacity: 1;
+    }
+
+    90%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
