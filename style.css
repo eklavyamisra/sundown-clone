@@ -412,7 +412,8 @@ html,body{
     display: flex;
     align-items: flex-end;
     justify-items: center;
-    height: 100vh;
+    height: 90vh;
+    overflow: hidden;
     width: 100%;
     color: white;
     background-color: black;
@@ -477,5 +478,57 @@ html,body{
 
     100%{
         opacity: 0;
+    }
+}
+
+.moving-box{
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    bottom: 60%;
+    left: -10%;
+    filter: blur(20px);
+    rotate: -10deg;
+    background-color: blue;
+    animation-name: moving-box1;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+.moving-box1{
+    height: 50vh;
+    width: 70vw;
+    position: absolute;
+    bottom: 60%;
+    right: -10%;
+    filter: blur(20px);
+    rotate: 10deg;
+    background-color: blue;
+    animation-name: moving-box;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes moving-box {
+    from{
+        transform: translate( 0%,10%)skew(10deg);
+    }
+    to{
+        transform: translate( 0%,-10%);
+    }
+}
+
+@keyframes moving-box1 {
+    from{
+        transform: translate( 0%,-10%)skew(10deg);
+    }
+    to{
+        transform: translate( 0%,10%);
     }
 }
