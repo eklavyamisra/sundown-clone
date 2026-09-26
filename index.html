@@ -3,134 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"/>
+    <title>Sundown Studio — Spaces That Inspire</title>
+    <meta name="description" content="Sundown is a multi-disciplinary studio focused on creating unique, end-to-end experiences and environments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="is-loading">
+
+    <!-- Film grain -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+    <!-- Preloader -->
     <div class="loader">
-        <h1>ENVIRONMENTS</h1>
-        <h1>EXPERIENCES</h1>
-        <h1>CONTENT</h1>
+        <div class="loader-words">
+            <h1>ENVIRONMENTS</h1>
+            <h1>EXPERIENCES</h1>
+            <h1>CONTENT</h1>
+        </div>
+        <div class="loader-meta">
+            <span>Sundown Studio</span>
+            <span>&copy;2026</span>
+        </div>
+        <div class="loader-count"><span class="count">0</span></div>
     </div>
-    <div class="fixed"></div>
-    <div class="main">
-            <div class="page1">
-                <div class="nav">
-                    <div class="part2">
-                        <h4><a href="">home</a></h4>
-                        <h4><a href="">about</a></h4>
-                        <h4><a href="">work</a></h4>
-                    </div>
-                </div>
-        
-                <div class="center">
-                    <div class="left">
-                        <h3>Sundown is a multi-disciplinary studio focused on creating unique, end-to-end experiences and environments.</h3>
-                    </div>
-                    <div class="right">
-                        <h1>SPACES <br>
-                            THAT <br>
-                            INSPIRE</h1>
-                    </div>
-                </div>
-                <div class="hero1"></div>
-                <div class="hero2"></div>
-                <video muted autoplay loop src="./images/video.mp4" ></video>
+
+    <!-- Floating preview for the work list -->
+    <div class="hover-img" aria-hidden="true">
+        <div class="hover-img-strip"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="nav">
+        <a href="#top" class="logo magnetic">Sundown<sup>&reg;</sup></a>
+        <nav class="nav-links">
+            <a href="#about" class="roll"><span data-text="About">About</span></a>
+            <a href="#work" class="roll"><span data-text="Work">Work</span></a>
+            <a href="#services" class="roll"><span data-text="Services">Services</span></a>
+            <a href="#gallery" class="roll"><span data-text="Archive">Archive</span></a>
+        </nav>
+        <a href="#contact" class="nav-cta magnetic">
+            <span class="roll"><span data-text="Let's talk">Let's talk</span></span>
+            <i class="ri-arrow-right-up-line"></i>
+        </a>
+    </header>
+
+    <main class="main" id="top">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-grid">
+                <p class="hero-intro" data-split>Sundown is a multi-disciplinary studio focused on creating unique, end-to-end experiences and environments.</p>
+                <h1 class="hero-title">
+                    <span class="line"><span>Spaces</span></span>
+                    <span class="line"><span><em>that</em></span></span>
+                    <span class="line"><span>Inspire</span></span>
+                </h1>
             </div>
 
-            <div class="page2">
-                <div class="moving">
-                    <div class="con">
-                        <h1>ENVIRONMENTS</h1>
-                        <div class="circle"></div>
-                        <h1>EXPERIENCES</h1>
-                        <div class="circle"></div>
-                        <h1>CONTENT</h1>
-                        <div class="circle"></div>
-                    </div>
-                    <div class="con">
-                        <h1>ENVIRONMENTS</h1>
-                        <div class="circle"></div>
-                        <h1>EXPERIENCES</h1>
-                        <div class="circle"></div>
-                        <h1>CONTENT</h1>
-                        <div class="circle"></div>
-                    </div>
-                    <div class="con">
-                        <h1>ENVIRONMENTS</h1>
-                        <div class="circle"></div>
-                        <h1>EXPERIENCES</h1>
-                        <div class="circle"></div>
-                        <h1>CONTENT</h1>
-                        <div class="circle"></div>
-                    </div>
-                </div>
+            <div class="hero-meta">
+                <span class="fade-in"><i class="ri-map-pin-line"></i> St. Louis, MO</span>
+                <span class="fade-in scroll-hint">Scroll to explore <i class="ri-arrow-down-line"></i></span>
+                <span class="fade-in">Est. 2014 — Now booking 2027</span>
+            </div>
 
-                <div class="content">
-                    <div class="con-left">
-                        <h1>We are a group of design-driven, goal-focused creators, producers, and designers who believe that the details make all the difference.</h1>
+            <div class="blob blob-1" aria-hidden="true"></div>
+            <div class="blob blob-2" aria-hidden="true"></div>
+
+            <div class="video-wrap" data-cursor="Play">
+                <video muted autoplay loop playsinline src="./images/video.mp4"></video>
+            </div>
+        </section>
+
+        <!-- MARQUEE + ABOUT -->
+        <section class="about" id="about">
+            <div class="marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <div class="marquee-group">
+                        <h2>Environments</h2><span class="dot"></span>
+                        <h2 class="outline">Experiences</h2><span class="dot"></span>
+                        <h2>Content</h2><span class="dot"></span>
                     </div>
-                    <div class="con-right">
-                        <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.jpg" alt="">
-                        <p>We love to create, we love to solve, we love to collaborate, and we love to turn amazing ideas into reality. We’re here to partner with you through every step of the process and know that relationships are the most important things we build.</p>
+                    <div class="marquee-group">
+                        <h2>Environments</h2><span class="dot"></span>
+                        <h2 class="outline">Experiences</h2><span class="dot"></span>
+                        <h2>Content</h2><span class="dot"></span>
                     </div>
-                    <div class="gooey"></div>
                 </div>
             </div>
-            <div class="page3">
-              <div class="elem-container" >
-                <div class="elem" data-image="https://plus.unsplash.com/premium_photo-1734543932716-431337d9c3c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8">
-                    <div class="overlay"></div>
-                    <h2>Maker studio HOI</h2>
+
+            <div class="about-grid">
+                <div class="about-left">
+                    <span class="label">(01) — About</span>
+                    <h2 class="about-text" data-scrub-words>We are a group of design-driven, goal-focused creators, producers, and designers who believe that the details make all the difference.</h2>
                 </div>
-                <div class="elem" data-image="https://images.unsplash.com/photo-1737157998574-2a75f0c52a09?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8">
-                    <div class="overlay"></div>
-                    <h2>SOHO 2023</h2>
+                <div class="about-right">
+                    <div class="about-img" data-reveal>
+                        <img data-parallax src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.jpg" alt="Studio team at work">
+                    </div>
+                    <p data-reveal>We love to create, we love to solve, we love to collaborate, and we love to turn amazing ideas into reality. We’re here to partner with you through every step of the process and know that relationships are the most important things we build.</p>
+                    <a href="#work" class="pill magnetic" data-reveal>
+                        <span class="roll"><span data-text="Our work">Our work</span></span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
-                <div class="elem" data-image="https://images.unsplash.com/photo-1737265396678-a7dac6fcdff2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D">
-                    <div class="overlay"></div>
-                    <h2>Airforce</h2>
-                </div>
-                <div class="elem" data-image="https://plus.unsplash.com/premium_photo-1730055194055-2ecec719fa5b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxN3x8fGVufDB8fHx8fA%3D%3D">
-                    <div class="overlay"></div>
-                    <h2>50TH Anniversary</h2>
-                </div>
-                <div class="elem" data-image="https://images.unsplash.com/photo-1736267739939-6ee19bbe7fae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D">
-                    <div class="overlay"></div>
-                    <h2>NYFE Popup</h2>
-                </div>
-                <div class="elem" data-image="https://images.unsplash.com/photo-1735656244152-5d0ad782f71d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D">
-                    <div class="overlay"></div>
-                    <h2>SOHO NYC</h2>
-                </div>
-              </div>
             </div>
-            <div class="page4">
-                <div class="projects">
-                    <div class="pro-left">
-                        <div class="pro-menu">
-                           <h1 class="h1" data-image="https://plus.unsplash.com/premium_photo-1732432913640-5449be488b43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzN3x8fGVufDB8fHx8fA%3D%3D">design</h1>
-                           <h1 class="h1" data-image="https://plus.unsplash.com/premium_photo-1733760125032-8a8b23769a0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyOXx8fGVufDB8fHx8fA%3D%3D">project</h1>
-                           <h1 class="h1" data-image="https://images.unsplash.com/photo-1737176436259-d0cd68c6f7b5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D">execution</h1>
+            <div class="gooey" aria-hidden="true"></div>
+        </section>
+
+        <!-- WORK LIST -->
+        <section class="work" id="work">
+            <div class="section-head">
+                <span class="label">(02) — Selected Work</span>
+                <h2 class="big-head"><span class="line"><span>Featured</span></span><span class="line"><span><em>projects</em></span></span></h2>
+            </div>
+
+            <div class="work-list">
+                <a href="#" class="work-item" data-cursor="View" data-image="https://plus.unsplash.com/premium_photo-1734543932716-431337d9c3c4?w=800&auto=format&fit=crop&q=70">
+                    <div class="overlay"></div>
+                    <span class="wi-num">01</span>
+                    <h3>Maker Studio HOI</h3>
+                    <span class="wi-cat">Environment</span>
+                    <span class="wi-year">2024</span>
+                    <i class="ri-arrow-right-up-line wi-arrow"></i>
+                </a>
+                <a href="#" class="work-item" data-cursor="View" data-image="https://images.unsplash.com/photo-1737157998574-2a75f0c52a09?w=800&auto=format&fit=crop&q=70">
+                    <div class="overlay"></div>
+                    <span class="wi-num">02</span>
+                    <h3>SOHO 2023</h3>
+                    <span class="wi-cat">Experience</span>
+                    <span class="wi-year">2023</span>
+                    <i class="ri-arrow-right-up-line wi-arrow"></i>
+                </a>
+                <a href="#" class="work-item" data-cursor="View" data-image="https://images.unsplash.com/photo-1737265396678-a7dac6fcdff2?w=800&auto=format&fit=crop&q=70">
+                    <div class="overlay"></div>
+                    <span class="wi-num">03</span>
+                    <h3>Airforce</h3>
+                    <span class="wi-cat">Content</span>
+                    <span class="wi-year">2023</span>
+                    <i class="ri-arrow-right-up-line wi-arrow"></i>
+                </a>
+                <a href="#" class="work-item" data-cursor="View" data-image="https://plus.unsplash.com/premium_photo-1730055194055-2ecec719fa5b?w=800&auto=format&fit=crop&q=70">
+                    <div class="overlay"></div>
+                    <span class="wi-num">04</span>
+                    <h3>50th Anniversary</h3>
+                    <span class="wi-cat">Experience</span>
+                    <span class="wi-year">2022</span>
+                    <i class="ri-arrow-right-up-line wi-arrow"></i>
+                </a>
+                <a href="#" class="work-item" data-cursor="View" data-image="https://images.unsplash.com/photo-1736267739939-6ee19bbe7fae?w=800&auto=format&fit=crop&q=70">
+                    <div class="overlay"></div>
+                    <span class="wi-num">05</span>
+                    <h3>NYFW Popup</h3>
+                    <span class="wi-cat">Environment</span>
+                    <span class="wi-year">2022</span>
+                    <i class="ri-arrow-right-up-line wi-arrow"></i>
+                </a>
+                <a href="#" class="work-item" data-cursor="View" data-image="https://images.unsplash.com/photo-1735656244152-5d0ad782f71d?w=800&auto=format&fit=crop&q=70">
+                    <div class="overlay"></div>
+                    <span class="wi-num">06</span>
+                    <h3>SOHO NYC</h3>
+                    <span class="wi-cat">Content</span>
+                    <span class="wi-year">2021</span>
+                    <i class="ri-arrow-right-up-line wi-arrow"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services" id="services">
+            <div class="services-panel">
+                <div class="services-left">
+                    <div>
+                        <span class="label label-light">(03) — What we do</span>
+                        <p class="services-lede">From first sketch to final install — <em>one team,</em> start to finish.</p>
+                    </div>
+                    <div class="svc-list">
+                        <div class="svc is-active" data-index="0">
+                            <h3><sup>01</sup>Design</h3>
+                            <p>Spatial concepts, brand worlds and material stories — shaped around the people who will move through them.</p>
+                        </div>
+                        <div class="svc" data-index="1">
+                            <h3><sup>02</sup>Project</h3>
+                            <p>Budgets, partners and timelines held together by one team that cares as much about the schedule as the sketch.</p>
+                        </div>
+                        <div class="svc" data-index="2">
+                            <h3><sup>03</sup>Execution</h3>
+                            <p>Fabrication, install and content capture — the last one percent that makes the whole thing feel inevitable.</p>
                         </div>
                     </div>
-                    <div class="pro-right"></div>
+                </div>
+                <div class="services-right">
+                    <img class="svc-img is-active" src="https://plus.unsplash.com/premium_photo-1732432913640-5449be488b43?w=1200&auto=format&fit=crop&q=70" alt="Design">
+                    <img class="svc-img" src="https://plus.unsplash.com/premium_photo-1733760125032-8a8b23769a0c?w=1200&auto=format&fit=crop&q=70" alt="Project">
+                    <img class="svc-img" src="https://images.unsplash.com/photo-1737176436259-d0cd68c6f7b5?w=1200&auto=format&fit=crop&q=70" alt="Execution">
                 </div>
             </div>
-            <div class="page5"></div>
-    </div>
+        </section>
 
-    <div class="footer">
-        <div class="moving-box"></div>
-        <div class="moving-box1"></div>
-        <h1>Sundown</h1>
-    </div>
-   
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+        <!-- HORIZONTAL GALLERY -->
+        <section class="gallery" id="gallery">
+            <div class="gallery-head">
+                <span class="label">(04) — Archive</span>
+                <div class="gallery-progress"><span></span></div>
+            </div>
+            <div class="gallery-track">
+                <div class="g-intro">
+                    <h2 class="big-head"><span class="line"><span>A decade</span></span><span class="line"><span>of <em>rooms</em></span></span><span class="line"><span>people</span></span><span class="line"><span>remember.</span></span></h2>
+                </div>
+                <figure class="g-card" data-cursor="Drag">
+                    <div class="g-img"><img src="https://plus.unsplash.com/premium_photo-1734543932716-431337d9c3c4?w=900&auto=format&fit=crop&q=70" alt=""></div>
+                    <figcaption><span>Maker Studio</span><span>01</span></figcaption>
+                </figure>
+                <figure class="g-card" data-cursor="Drag">
+                    <div class="g-img"><img src="https://images.unsplash.com/photo-1737157998574-2a75f0c52a09?w=900&auto=format&fit=crop&q=70" alt=""></div>
+                    <figcaption><span>SOHO</span><span>02</span></figcaption>
+                </figure>
+                <figure class="g-card" data-cursor="Drag">
+                    <div class="g-img"><img src="https://images.unsplash.com/photo-1737265396678-a7dac6fcdff2?w=900&auto=format&fit=crop&q=70" alt=""></div>
+                    <figcaption><span>Airforce</span><span>03</span></figcaption>
+                </figure>
+                <figure class="g-card" data-cursor="Drag">
+                    <div class="g-img"><img src="https://plus.unsplash.com/premium_photo-1730055194055-2ecec719fa5b?w=900&auto=format&fit=crop&q=70" alt=""></div>
+                    <figcaption><span>Anniversary</span><span>04</span></figcaption>
+                </figure>
+                <figure class="g-card" data-cursor="Drag">
+                    <div class="g-img"><img src="https://images.unsplash.com/photo-1736267739939-6ee19bbe7fae?w=900&auto=format&fit=crop&q=70" alt=""></div>
+                    <figcaption><span>NYFW</span><span>05</span></figcaption>
+                </figure>
+                <figure class="g-card" data-cursor="Drag">
+                    <div class="g-img"><img src="https://images.unsplash.com/photo-1735656244152-5d0ad782f71d?w=900&auto=format&fit=crop&q=70" alt=""></div>
+                    <figcaption><span>SOHO NYC</span><span>06</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta" id="contact">
+            <span class="label">(05) — Contact</span>
+            <h2 class="cta-title">
+                <span class="line"><span>Let’s make</span></span>
+                <span class="line"><span>something</span></span>
+                <span class="line"><span><em>unforgettable</em></span></span>
+            </h2>
+            <a href="mailto:hello@sundown.studio" class="cta-btn magnetic" data-strength="0.5">
+                <span>Start a<br>project</span>
+                <i class="ri-arrow-right-up-line"></i>
+            </a>
+        </section>
+
+        <div class="footer-spacer"></div>
+    </main>
+
+    <!-- Footer (revealed from behind) -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div>
+                    <span class="label label-light">Say hello</span>
+                    <a href="mailto:hello@sundown.studio" class="footer-mail">hello@sundown.studio</a>
+                </div>
+                <div>
+                    <span class="label label-light">Social</span>
+                    <a href="#" class="roll"><span data-text="Instagram">Instagram</span></a>
+                    <a href="#" class="roll"><span data-text="LinkedIn">LinkedIn</span></a>
+                    <a href="#" class="roll"><span data-text="Behance">Behance</span></a>
+                </div>
+                <div>
+                    <span class="label label-light">Studio</span>
+                    <p>1234 Washington Ave<br>St. Louis, MO 63103</p>
+                </div>
+                <div>
+                    <span class="label label-light">Local time</span>
+                    <p class="local-time">--:--:--</p>
+                </div>
+            </div>
+            <h1 class="footer-big" aria-label="Sundown">
+                <span>S</span><span>u</span><span>n</span><span>d</span><span>o</span><span>w</span><span>n</span>
+            </h1>
+        </div>
+        <div class="moving-box" aria-hidden="true"></div>
+        <div class="moving-box1" aria-hidden="true"></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
